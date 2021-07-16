@@ -1,0 +1,566 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration:none;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding:0 80px ;
+    margin: auto;
+}
+/* navbar estilos */
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background:#1A4C4B;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    text-shadow: 2px 2px #000;
+}
+.navbar .logo a span{
+    color: #256362;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px #000;
+}
+.navbar.sticky .logo a span{
+    color:#fff;
+    transition: all 0.3s ease;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    text-shadow: 2px 2px #000;
+}
+.navbar .menu li a:hover{
+    color: #3b8f8d;
+}
+/* menu btn estilos */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* scroll up btn */
+.scroll-up-btn{
+    position: fixed;
+    height:45px ;
+    width: 42px;
+    background: #123837;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 99999;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+
+
+/* inicio style */
+
+.inicio{
+    display: flex;
+    background: url("images/fondo5.jpg") no-repeat center;
+    height: 100vh;
+    background-size: cover;
+	background-attachment: fixed;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.inicio .max-width{
+    margin: auto 0 auto 40px;
+}
+.inicio .home-content .text-1{
+    font-size: 27px;
+    text-shadow: 2px 2px #000;
+}
+.inicio .home-content .text-2{
+    font-size: 90px;
+    font-weight: 600;
+    margin-left: -3px;
+    text-shadow: 2px 2px #000;
+}
+.inicio .home-content .text-3{
+    font-size: 40px;
+    margin:20px 0;
+    text-shadow: 2px 2px #000;
+}
+.inicio .home-content .text-3 span{
+    color:#307271;
+    font-weight: 500;
+}
+.inicio .home-content a{
+    display: inline-block;
+    background:#256362 ;
+    color:#fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid #1A4C4B;
+    transition: all 0.4 ease;
+    box-shadow: 5px 5px #000;
+}
+.inicio .home-content a:hover{
+    color:#1A4C4B;
+    background: none;
+}
+
+/* DISEÑOS SIMILARES */
+section{
+    padding: 100px 0;
+}
+.yo, .portafolio, .servicios, .contacto, footer{
+    font-family: 'Poppins', sans-serif;
+    
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight:500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title:before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+
+}
+section .title:after{
+    
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color:#307271;
+    padding:5px;
+    background: rgba(221, 221, 221) ;
+    transform: translateX(-50%);
+}
+
+
+/* sobre mí section  */
+
+.yo{
+    background: #ddd;
+}
+
+.yo .title:after{
+    content: "About me";
+}
+.yo .about-content,
+.portafolio .port-content,
+.contacto .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.yo .about-content .left{
+    width: 45%;
+}
+.yo .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.yo .about-content .right{
+    width: 55%;
+}
+.yo .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.yo .about-content .right p{
+    text-align: justify;
+}
+
+/* portafolio design */
+.portafolio{
+    color: #000;
+    background: #ddd;
+
+}
+.portafolio .title::before{
+    background:#000;
+}
+.portafolio .title::after{
+    content: "Work done";
+    background: #ddd;
+}
+.portafolio .port-content .card{
+    width: calc(50% - 20px);
+    background: #eee;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.portafolio .port-content .card:hover{
+    background: #1A4C4B;
+}
+.portafolio .port-content .card:hover h2 a{
+    color:#fff;
+    transition: all 0.3s ease;
+}
+.portafolio .port-content .card .box{
+    transition: all 0.3s ease;
+}
+.portafolio .port-content .card:hover .box{
+    transform: scale(1.05);
+}
+.portafolio .port-content .card h2 a{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color:#000;
+    transition: all 0.3s ease;
+}
+.portafolio .port-content .card img{
+   margin-top: 10px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: default;
+
+}
+/* servicios */
+.servicios{
+    color: #fff;
+    background: #111;
+
+}
+.servicios .title::before{
+    background:#fff ;
+}
+.servicios .title::after{
+    content: "What i provide";
+    background: #111;
+}
+.servicios .serv-content{
+    display: flex;   
+    
+}
+.servicios .serv-content .card{
+    margin: 0 10px;
+    background: #222;
+    text-align: center;
+    padding: 20px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+.servicios .serv-content .card i{
+    font-size: 50px;
+    color: #3b8f8d;
+}
+.servicios .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 10px 7px 0;
+}
+.servicios .serv-content .card p{
+    text-align:justify;
+}
+.servicios .serv-content .card:hover{
+    background: #1A4C4B;
+}
+.servicios .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.servicios .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.servicios .serv-content .card:hover i{
+    color: #bbb;
+}
+
+
+
+/* contacto section */
+.contacto{
+    color: #fff;
+    background: #111;
+
+}
+.contacto .title::before{
+    background:#fff ;
+}
+.contacto .title::after{
+    content: "Get in touch";
+    background: #111;
+}
+.contacto .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contacto .contact-content .left{
+    cursor: default;
+}
+.contacto .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contacto .contact-content .left p{
+    text-align: justify;
+}
+.contacto .contact-content .left .icons{
+  margin: 10px 0;  
+}
+.contacto .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contacto .contact-content .row .info{
+    margin-left: 30px;
+
+}
+.contacto .contact-content .row i{
+    font-size: 25px;
+    color: #256362;
+}
+.contacto .contact-content .info .head{
+    font-weight: 500;
+}
+.contacto .contact-content .info .sub-title{
+    color:#bbb;
+}
+.contacto .right .fields{
+    display: flex;
+}
+.contacto .right .fields,
+.contacto .right .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contacto .right .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contacto .right form .name{
+    margin-right: 10px;
+}
+.contacto .right form .email{
+    margin-left: 10px;
+}
+.contacto .right .field input, 
+.contacto .right .textarea textarea{
+    height:100% ;
+    width: 100%;
+    border: 2px solid #256362;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+
+}
+.contacto .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contacto .right form .button{
+    height: 47px;
+    width: 170px;
+    
+
+}
+.contacto .right form .button input{
+    width:100% ;
+    height: 100%;
+    border-radius: 6px;
+    border: 2px solid #256362;
+    background: #1A4C4B;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+.contacto .right form .button input:hover{
+    background: none;
+    color: #256362;
+    transition: all 0.3 ease;
+}
+
+/* footer estilos */
+footer {
+    background:#1A4C4B ;
+    padding: 10px 23px;
+    color: #fff;
+    text-align: center;
+    
+}
+footer span a{
+    color: #000;
+}
+
+
+
+
+/* reseñas section */
+
+
+
+/* responsive design */
+@media (max-width:1300px) {
+    .inicio .max-width{
+        margin-left:0px ;
+    }
+}
+@media (max-width:1104px) {
+    .yo .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+    
+    .portafolio .port-content .card{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+.portafolio .port-content .card img{
+
+     height: auto;
+
+ 
+ }
+@media (max-width:991px) {
+   .max-width{
+    padding:0 50px;
+    }
+}
+@media (max-width:947px) {
+    
+ 
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top:0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all .5s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .inicio .home-content .text-2{
+        font-size: 60px;
+    }
+    .inicio .home-content .text-3{
+        font-size: 35px;
+    }
+    .inicio .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width:800px ;
+    }
+    .yo .about-content .column{
+        width: 100%;
+
+    }
+    .yo .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0  auto 60px;
+    }
+    .yo .about-content .right{
+        flex:100%;
+    }
+    .servicios .serv-content{
+        flex-wrap: wrap;
+    }
+    .servicios .serv-content .card{
+        margin: 10px 10px;
+    }
+    .contacto .contact-content .column{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+}
+
+@media (max-width:690px) {
+    .max-width{
+        padding:0 23px ;
+    }
+    .inicio .home-content .text-2{
+        font-size: 50px;
+        margin-top: 15px;
+        
+    }
+    .inicio .home-content .text-3{
+        font-size: 27px;
+        margin-top: 15px;
+    }
+    .inicio .home-content a{
+        font-size: 20px;
+        padding: 9px 25px;
+    }
+
+ }
